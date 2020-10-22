@@ -1,4 +1,5 @@
 #include "laboratorio.h"
+#include <fstream>
 
 Laboratorio::Laboratorio()
 {
@@ -34,3 +35,47 @@ void Laboratorio::mostrar()
         //cout<<endl;
     }
 }
+
+void Laboratorio::respaldar()
+{
+    ofstream archivo ("computadora.txt");
+    if (archivo.is_open()){
+        for(size_t i=0;i<lab;i++){
+            Computadora &c = arreglo[i];
+            archivo << c.getMarca()<<endl;
+            archivo << c.getSistema_operativo()<<endl;
+            archivo << c.getUsuario()<<endl;
+            archivo << c.getMemoria_RAM()<<endl;
+    }
+}
+    archivo.close();
+}
+
+/* void Laboratorio::recuperar()
+{
+    ifstream archivo("computadoras.txt");
+    if(archivo.is_open()){
+        string t;
+        string usuario;
+        int memoria;
+        Computadora c;
+
+        while(true){
+            getline(archivo, t);
+            if (archivo.eof()){
+                break;
+            }
+            c.setMarca(t);
+            getline(archivo, t);
+            c.setSistema_operativo(t);
+            getline(archivo, t);
+            usuario = stof(t);
+            c.setUsuario(usuario);
+            getline(archivo, t);
+            memoria = stoi(t);
+            c.setMemoria_RAM(memoria);
+            agregarFinal(c);
+        }
+    }
+    archivo.close();
+} */
