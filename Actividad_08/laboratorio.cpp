@@ -51,12 +51,11 @@ void Laboratorio::respaldar()
     archivo.close();
 }
 
-/* void Laboratorio::recuperar()
+void Laboratorio::recuperar()
 {
-    ifstream archivo("computadoras.txt");
+    ifstream archivo("computadora.txt");
     if(archivo.is_open()){
         string t;
-        string usuario;
         int memoria;
         Computadora c;
 
@@ -67,15 +66,17 @@ void Laboratorio::respaldar()
             }
             c.setMarca(t);
             getline(archivo, t);
+
             c.setSistema_operativo(t);
             getline(archivo, t);
-            usuario = stof(t);
-            c.setUsuario(usuario);
+
+            c.setUsuario(t);
             getline(archivo, t);
+            
             memoria = stoi(t);
             c.setMemoria_RAM(memoria);
             agregarFinal(c);
         }
     }
     archivo.close();
-} */
+} 

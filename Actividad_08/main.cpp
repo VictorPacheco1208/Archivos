@@ -4,8 +4,7 @@ using namespace std;
 
 int main(){
     Laboratorio l;
-    l.respaldar();
-    //l.recuperar();
+    l.recuperar();
     /* Computadora c1 = Computadora("Apple", "MacOs", "Jorge", 16); //La Memoria_RAM es en GB
 
     Computadora c2;
@@ -33,12 +32,11 @@ int main(){
     //cout << c2;
     //cout << c5;
 
-    Computadora c6;
+    /* Computadora c6;
     cin>>c6;
     //lab.agregarFinal(c6);
-    l<<c6;
+    l<<c6; */
     l.mostrar();
-    l.respaldar();
-
+    //l.respaldar();
     return 0;
-}
+}   
