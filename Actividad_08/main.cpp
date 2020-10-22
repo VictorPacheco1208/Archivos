@@ -2,7 +2,6 @@
 #include "laboratorio.h"
 using namespace std;
 
-
 int main(){
     Computadora c1 = Computadora("Apple", "MacOs", "Jorge", 16); //La Memoria_RAM es en GB
 
@@ -20,14 +19,21 @@ int main(){
     c4.setUsuario("Juan");
     c4.setMemoria_RAM(4);
 
-    Computadora c5 = Computadora("Asus", "Linux", "Alan", 16);
+    //Computadora c5 = Computadora("Asus", "Linux", "Alan", 16);
 
     Laboratorio lab;
-    lab.agregarFinal(c1);
-    lab.agregarFinal(c2);
-    lab.agregarFinal(c3);
-    lab.agregarFinal(c4);
-    lab.agregarFinal(c5);
+    //lab.agregarFinal(c1);
+    //lab.agregarFinal(c2);
+    //lab.agregarFinal(c3);
+    //lab.agregarFinal(c4);
+    //lab.agregarFinal(c5);
+    //cout << c2;
+    //cout << c5;
+
+    Computadora c6;
+    cin>>c6;
+    //lab.agregarFinal(c6);
+    lab<<c6;
     lab.mostrar();
 
     return 0;
